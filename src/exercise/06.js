@@ -21,7 +21,7 @@ function UsernameForm({onSubmitUsername}) {
   // to do so, set the value of 'htmlFor' prop of the label to the id of input
 
   const inputRef = React.useRef()
-  const [error, setError] = React.useState(null)
+  // const [error, setError] = React.useState(null)
   const [username, setUsername] = React.useState('')
 
   const handleSubmit = (event) => {
@@ -41,8 +41,9 @@ function UsernameForm({onSubmitUsername}) {
         <label htmlFor='username'>Username:</label>
         <input id='username' type="text" ref={inputRef} onChange={handleChange} value={username}/>
       </div>
-      <button type="submit" disabled={!!error}>Submit</button>
-      {!!error && <p role="alert">{error}</p> }
+      <button type="submit">Submit</button>
+      {/* <button type="submit" disabled={!!error}>Submit</button> */}
+      {/* {!!error && <p role="alert">{error}</p> } */}
     </form>
   )
 }
